@@ -1,0 +1,83 @@
+header{
+    background-image: url(../../images/woman.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    nav{
+
+        h1{
+            position: absolute;
+            top: 8px;
+            left: var(--main-margin);
+            margin: var(--navBar-margin);
+            text-transform: uppercase;
+            margin-left: 0px;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        ul{   
+            position: absolute;
+            right: var(--main-margin); 
+            top: 0px; 
+            
+            li{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: var(--navBar-margin);
+                font-size: 16px;
+                font-weight: 600;
+
+            }
+
+            li:last-child{
+                    height: 34px;
+                    width: 100%;
+                    border-radius: 30px;
+                    background-color:#7E64EB;     
+                    margin-right: 0px;  
+                    padding: 20px 30px;;      
+            }
+        }        
+    }
+
+    div.headerContents{
+        margin: var(--main-margin);
+
+        p{font-weight: 700;}
+
+        p:first-child{font-size:200px;}
+
+        p:nth-child(2){font-size:31px;}
+
+        div.btn{
+            position: absolute;
+            bottom: var(--main-margin);
+            display: flex;
+
+            div{
+                border-radius: 50%;
+                background-color:#707070;
+                height: 8px;
+                width: 8px;
+                margin-right: 8px;
+            }
+        }
+        .media{
+            position: absolute;
+            bottom: var(--main-margin);
+            right: var(--main-margin);           
+
+            li{
+                margin-left: 10px;
+            }
+        }
+    }   
+}
