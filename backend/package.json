@@ -1,0 +1,11 @@
+{
+  "name": "quebrasilencio",
+  "version": "1.0.0",
+  "description": "Aplicação para de apoio as pessoas que sofrem violência doméstica.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
