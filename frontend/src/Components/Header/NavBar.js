@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+//import { Link} from 'react-router-dom';
 import './Header.scss';
 
 export class NavBar extends Component {
+
+ 
+  
   render() {
     return (
       <nav>
@@ -10,24 +14,25 @@ export class NavBar extends Component {
 
         <ul className="color-white">
             <li>
-                <a href="#home">Home</a>
+                <a href="./Home">Home</a>
             </li>
             <li>
-                <a href="#howitwork">Como Funciona</a>
+                <a href="#HowItWorks">Como Funciona</a>
             </li>
             <li>
-                <a href="#about">Quem Somos</a>
+                <a href="#About">Quem Somos</a>
             </li>
             <li>
-                <a href="#contacts">Contactos</a>
+                <a href="#Contacts">Contactos</a>
             </li>
             <li>
-                <a href="#register">Registro</a> / <a href="#login">Login</a>
+                <a href="./LoginRegister">Login | Registro</a> 
             </li>
+           
         </ul>
       </nav>
     )
   }
 }
 
-export default NavBar
+export default NavBar;
