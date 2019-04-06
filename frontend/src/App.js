@@ -7,8 +7,22 @@ import Main from "./Components/Main/Main";
 import LoggedHome from "./Components/Home/LoggedHome";
 import LoginRegister from "./Components/Login/LoginRegister";
 import RegisterStepOne from "./Components/Login/Register/RegisterStepOne";
+import RegisterStepTwo from "./Components/Login/Register/RegisterStepTwo";
+import RegisterStepThreeProfessional from "./Components/Login/Register/RegisterStepThreeProfessional";
+import RegisterStepThreeVictim from "./Components/Login/Register/RegisterStepThreeVictim";
 import Page404 from "./Components/Errors/Page404";
 import ForgotPassword from "./Components/Login/Register/ForgotPassword";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faLock,
+  faUser,
+  faEnvelope,
+  faCheck,
+  faMap,
+  faUpload,
+  faPhone
+} from "@fortawesome/free-solid-svg-icons";
+library.add(faLock, faUser, faEnvelope, faCheck, faMap, faUpload, faPhone);
 
 const LandingPage = () => {
   return (
@@ -19,23 +33,31 @@ const LandingPage = () => {
   );
 };
 
-const AuthRoute = function({ Component, ...rest }) {
+const AuthRoute = function({ Component, ...props }) {
   return (
     <Route
-      {...rest}
+      {...props}
       render={() =>
-        /*checa se esta logado*/ false ? <Component /> : <LandingPage />
+        /*checa se esta logado*/ false ? (
+          <Component {...props} />
+        ) : (
+          <LandingPage />
+        )
       }
     />
   );
 };
 
-const NonAuthRoute = function({ Component, ...rest }) {
+const NonAuthRoute = function({ Component, ...props }) {
   return (
     <Route
-      {...rest}
+      {...props}
       render={() =>
-        /*checa se esta logado*/ false ? <LoggedHome /> : <Component />
+        /*checa se esta logado*/ false ? (
+          <LoggedHome />
+        ) : (
+          <Component {...props} />
+        )
       }
     />
   );
@@ -53,6 +75,21 @@ export default () => (
           exact
           path="/registerStepOne"
           Component={RegisterStepOne}
+        />
+        <NonAuthRoute
+          exact
+          path="/registerStepTwo"
+          Component={RegisterStepTwo}
+        />
+        <NonAuthRoute
+          exact
+          path="/registerStepThreeProfessional"
+          Component={RegisterStepThreeProfessional}
+        />
+        <NonAuthRoute
+          exact
+          path="/registerStepThreeVictim"
+          Component={RegisterStepThreeVictim}
         />
         <NonAuthRoute exact path="/forgotPassword" Component={ForgotPassword} />
         <Route component={Page404} />

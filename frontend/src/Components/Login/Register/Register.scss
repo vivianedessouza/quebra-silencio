@@ -9,9 +9,6 @@ $textarea-color: #c5bbef;
 $Montserrat: Montserrat, Bold Italic;
 $medium-size: 20px;
 
-body {
-  text-align: center;
-}
 
 .external--container {
   background-color: $purple-back;
@@ -21,9 +18,12 @@ body {
 
   .main--section {
     background-color: $white-color;
-    padding: 0px 163px 0px 163px;
     margin: 0px 100px 0px 100px;
     height: 768px;
+  }
+
+  .position-center{
+    text-align: center;
   }
 
   .logo {
@@ -32,6 +32,7 @@ body {
     font-size: $medium-size;
     text-transform: uppercase;
     padding: 54px 0 54px;
+    text-align: center;
   }
 
   .color-purple {
@@ -53,17 +54,19 @@ body {
     color: $purple-color;
     margin: 0 auto;
     padding-top: 30px;
-    padding-bottom: 20px;
+
   }
 
   .input--email {
     width: 414.15px;
-    height: 20px;
     background-color: $gray-color;
     font-size: 13px;
     padding: 20px;
-    border: 0;
-    margin-top: 50px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 59px;
+    margin-bottom: 61px;
+    border:none;
   }
 
   .btn-register {
@@ -76,20 +79,21 @@ body {
     font-size: 19px;
     color: $light-purple-color;
     margin-bottom: 50px;
+    text-align: center;
   }
 
   .btn-users {
-    width: 234px;
-    height: 57px;
-    text-align: center;
-    border: 0;
-    background-color: $purple-color;
-    color: $white-color;
-    font-size: 19px;
-    margin-right: 30px;
-    font-family: $Montserrat;
-    margin-top: 79px;
+    background-color: #806ad9;
+    color: #fff;
     cursor: pointer;
+    display: inline-block;
+    margin-right: 30px;
+    width: 275px;
+    border-radius: 4px;
+    text-align: left;
+    padding: 15px;
+    font-size: 19px;
+    margin-top: 70px;
   }
 
   .btn-professional {
@@ -103,43 +107,61 @@ body {
     margin-right: 30px;
     font-family: $Montserrat;
     margin-top: 79px;
+    text-align: center;
+    border-radius: 5px;
     cursor: pointer;
+    display: inline-block;
   }
 
   .next--step {
     font-size: 14px;
     color: $light-purple-color;
-    float: right;
+    position: absolute;
     width: 123px;
+    right: 148px;
+    bottom: -217px;
+    
   }
 
   .back--step {
     font-size: 14px;
     color: $light-purple-color;
-    float: left;
+    position: absolute;
     width: 123px;
+    left: 148px;
+    bottom: -217px;
+  }
+
+  .input--group{
+    padding:109px;
+    margin-top: -108px;
   }
 
   .fill--input {
     width: 414.15px;
-    height: 20px;
-    background-color: $gray-color;
+    background-color: #eeebfb;
     font-size: 13px;
     padding: 20px;
-    border: 0;
     margin-bottom: 10px;
-    margin-right: 10px;
-    color: $textarea-color;
+  }
+
+  .input-left{
+    display:block;
+
+  }
+
+  .input-right{
+    float: right;
+    margin-top: -71px;
+
   }
 
   .file--input {
     border-style: dashed;
-    width: 414.15px;
+    width: 446.15px;
     height: 56.07px;
     font-size: 13px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    border-color: $purple-color;
+    border-color: #806ad9;
   }
 
   .spacer {
@@ -151,19 +173,25 @@ body {
     height: 134px;
     background-color: $gray-color;
     font-size: 13px;
-    padding: 20px;
     border: 0;
-    margin-top: 50px;
     color: $textarea-color;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 1px;
+    align-items: center;
+    margin-right: 35px;
   }
 
   .state--input {
-    border-style: dashed;
-    width: 414.15px;
+    width: 347px;
     height: 20px;
     font-size: 13px;
-    border-color: $purple-color;
     padding: 10px;
+    border: 0;
+    background-color: $gray-color;
+    border-radius: 1px;
+    margin-right: 399px;
+    color: $textarea-color;
   }
 
   .information {

@@ -1,31 +1,28 @@
 import React, { Component } from "react";
 import "./Register.scss";
 
-class RegisterStepThree extends Component {
+class RegisterStepThreeProfessional extends Component {
   render() {
     return (
       <div className="external--container">
         <h1 className="logo">
           Quebra <span className="color-purple">o Silêncio</span>
         </h1>
-        <div class="main--section">
+        <div className="main--section">
           <h1 className="title">Crie a sua Conta</h1>
           <p className="steps">Passo 3 de 3</p>
-          <p className="text">Preencher dados - Ajuda</p>
-          <div>
-            <button className="btn-professional">Psicólogo(a)</button>
-            <button className="btn-professional">Advogado(a)</button>
-          </div>
-          <textarea className="situation--description">
-            Descreva a sua situação… Esta informação estará visível apenas para
-            profissionais que a possam ajudar
-          </textarea>
+          <p className="text">Preencher dados - Documentos</p>
           <input
             type="text"
-            name="state"
+            name="image"
+            id="image"
             className="state--input"
-            placeholder="Estado Civil"
+            placeholder="Upload - Foto de Perfil (Opcional)"
           />
+          <p className="information">
+            Informação de que a conta ficará pendente até os documentação ficar
+            aprovada
+          </p>
           <div>
             <a href="" className="next--step">
               Passo seguinte
@@ -42,4 +39,4 @@ class RegisterStepThree extends Component {
   }
 }
 
-export default RegisterStepThree;
+export default RegisterStepThreeProfessional;
