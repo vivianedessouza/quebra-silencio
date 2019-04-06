@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import Form from './Form';
-import SocialMedia from '../Header/SocialMedia';
-import Img from '../../images/map.png';
+import React, { Component } from "react";
+import Form from "./Form";
+import SocialMedia from "../Header/SocialMedia";
+import Img from "../../images/map.png";
 import Iframe from "react-iframe";
 
-export class Contacts extends Component { 
+export class Contacts extends Component {
   render() {
     return (
       <section id="contacts" className="grid purple-gradient color-white">
@@ -19,13 +19,11 @@ export class Contacts extends Component {
           </div>
 
           <SocialMedia />
-
         </article>
 
         <article className="filter map">
           <img src={Img} />
         </article>
-        
       </section>
     );
   }

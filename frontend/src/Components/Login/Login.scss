@@ -1,0 +1,120 @@
+$purple-color: #806ad9;
+$purple-back: #7e64eb;
+$gray-color: #eeebfb;
+$dark-gray-color: #7f7f80;
+$white-color: #fff;
+$Montserrat: Montserrat, Bold Italic;
+$medium-size: 20px;
+
+body {
+  text-align: center;
+}
+
+.container {
+  background-color: $purple-back;
+  display: table;
+
+  .logo {
+    color: $white-color;
+    font-family: $Montserrat;
+    font-size: $medium-size;
+    margin-top: 54px;
+    margin-bottom: 54px;
+    text-transform: uppercase;
+  }
+
+  .color-purple {
+    color: #9f8deb;
+    text-align: center;
+  }
+
+  .start--section {
+    background-color: $white-color;
+    width: 500px;
+    height: 802px;
+    float: left;
+    margin-left: 152px;
+    margin-right: 0px;
+    margin-bottom: 139px;
+  }
+
+  .title {
+    text-align: center;
+    color: $purple-color;
+    font-family: $Montserrat;
+    font-size: 34px;
+    margin-top: 147px;
+  }
+
+  .input--username {
+    width: 414.15px;
+    height: 20px;
+    background-color: $gray-color;
+    font-size: 13px;
+    padding: 20px;
+    margin-top: 61px;
+    margin-bottom: 16.82px;
+    border: 0;
+  }
+
+  .input--password {
+    width: 414.15px;
+    height: 20px;
+    background-color: $gray-color;
+    font-size: 13px;
+    padding: 20px;
+    margin-bottom: 134px;
+    border: 0;
+  }
+
+  .btn-purple {
+    padding: 19px 44px;
+    width: 234px;
+    height: 57px;
+    cursor: pointer;
+  }
+
+  .btn-style {
+    text-decoration: uppercase;
+    font-size: 16px;
+  }
+
+  .reset--password {
+    font-size: 13px;
+    color: $dark-gray-color;
+    font-family: $Montserrat;
+    margin: 0;
+  }
+
+  hr {
+    width: 230px;
+  }
+
+  .start--registration {
+    background-color: $gray-color;
+    width: 500px;
+    height: 802px;
+    margin-right: 152px;
+    margin-bottom: 139px;
+    margin-left: 0px;
+    float: right;
+  }
+
+  .text-purple {
+    font-size: 16px;
+    color: $purple-color;
+    margin-top: 62px;
+  }
+
+  .btn-register {
+    margin-top: 240px;
+    cursor: pointer;
+    color: $white-color;
+  }
+
+  .fas fa-user-alt {
+    float: left;
+    margin: 3px 0px 0px -20px;
+    cursor: pointer;
+  }
+}

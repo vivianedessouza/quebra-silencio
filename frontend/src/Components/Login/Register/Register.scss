@@ -1,0 +1,175 @@
+$purple-color: #806ad9;
+$light-purple-color: #9f8deb;
+$rainbow-color: #bb61ff;
+$purple-back: #7e64eb;
+$gray-color: #eeebfb;
+$dark-gray-color: #7f7f80;
+$white-color: #fff;
+$textarea-color: #c5bbef;
+$Montserrat: Montserrat, Bold Italic;
+$medium-size: 20px;
+
+body {
+  text-align: center;
+}
+
+.external--container {
+  background-color: $purple-back;
+  background-size: cover;
+  margin: 0;
+  padding-bottom: 137px;
+
+  .main--section {
+    background-color: $white-color;
+    padding: 0px 163px 0px 163px;
+    margin: 0px 100px 0px 100px;
+    height: 768px;
+  }
+
+  .logo {
+    color: $white-color;
+    font-family: $Montserrat;
+    font-size: $medium-size;
+    text-transform: uppercase;
+    padding: 54px 0 54px;
+  }
+
+  .color-purple {
+    color: $light-purple-color;
+    text-transform: uppercase;
+  }
+
+  .title {
+    text-align: center;
+    color: $purple-color;
+    font-family: $Montserrat;
+    font-size: 34px;
+    padding-top: 100px;
+  }
+
+  .text {
+    width: 710px;
+    font-size: 16px;
+    color: $purple-color;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  .input--email {
+    width: 414.15px;
+    height: 20px;
+    background-color: $gray-color;
+    font-size: 13px;
+    padding: 20px;
+    border: 0;
+    margin-top: 50px;
+  }
+
+  .btn-register {
+    margin-top: 62px;
+    color: $white-color;
+    height: 50px;
+  }
+
+  .steps {
+    font-size: 19px;
+    color: $light-purple-color;
+    margin-bottom: 50px;
+  }
+
+  .btn-users {
+    width: 234px;
+    height: 57px;
+    text-align: center;
+    border: 0;
+    background-color: $purple-color;
+    color: $white-color;
+    font-size: 19px;
+    margin-right: 30px;
+    font-family: $Montserrat;
+    margin-top: 79px;
+    cursor: pointer;
+  }
+
+  .btn-professional {
+    width: 350px;
+    height: 57px;
+    text-align: center;
+    border: 0;
+    background-color: $purple-color;
+    color: $white-color;
+    font-size: 19px;
+    margin-right: 30px;
+    font-family: $Montserrat;
+    margin-top: 79px;
+    cursor: pointer;
+  }
+
+  .next--step {
+    font-size: 14px;
+    color: $light-purple-color;
+    float: right;
+    width: 123px;
+  }
+
+  .back--step {
+    font-size: 14px;
+    color: $light-purple-color;
+    float: left;
+    width: 123px;
+  }
+
+  .fill--input {
+    width: 414.15px;
+    height: 20px;
+    background-color: $gray-color;
+    font-size: 13px;
+    padding: 20px;
+    border: 0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    color: $textarea-color;
+  }
+
+  .file--input {
+    border-style: dashed;
+    width: 414.15px;
+    height: 56.07px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-color: $purple-color;
+  }
+
+  .spacer {
+    margin-top: 30px;
+  }
+
+  .situation--description {
+    width: 700px;
+    height: 134px;
+    background-color: $gray-color;
+    font-size: 13px;
+    padding: 20px;
+    border: 0;
+    margin-top: 50px;
+    color: $textarea-color;
+  }
+
+  .state--input {
+    border-style: dashed;
+    width: 414.15px;
+    height: 20px;
+    font-size: 13px;
+    border-color: $purple-color;
+    padding: 10px;
+  }
+
+  .information {
+    font-size: 16px;
+    color: $purple-color;
+    margin-top: 150px;
+    margin-bottom: 74px;
+  }
+}

@@ -1,50 +1,62 @@
-import React, { Component } from 'react';
-//import {Switch, Route, BrowserRouter} from 'react-router-dom';
-import './App.scss';
-//import Header from './Components/Header/Header';
-//import HeaderContents from './Components/Header/HeaderContents';
-import LoginRegister from "./Components/Header/Login/LoginRegister";
-import UploadDoc from "./Components/Header/Login/Register/UploadDoc";
-import Reset from "./Components/Header/Login/Register/Reset";
-import ExpiredLink from "./Components/Header/Login/Register/ExpiredLink";
-import AccountFirstStep from "./Components/Header/Login/Register/AccountFirstStep";
-import AccountSecStep from "./Components/Header/Login/Register/AccountSecStep";
-import AccountThirdStep from "./Components/Header/Login/Register/AccountThirdStep";
-//import HeaderContents from './Components/Header/HeaderContents';
-//import HowItWorks from './Components//Main/HowItWorks';
-//import About from './Components//Main/About';
-//import Contacts from './Components//Main/Contacts';
-//import Main from "./Components/Main/Main";
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faIgloo } from '@fortawesome/free-solid-svg-icons'
+import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import Switch from "react-router-dom/Switch";
+import "./App.scss";
+import Header from "./Components/Header/Header";
+import Main from "./Components/Main/Main";
+import LoggedHome from "./Components/Home/LoggedHome";
+import LoginRegister from "./Components/Login/LoginRegister";
+import RegisterStepOne from "./Components/Login/Register/RegisterStepOne";
+import Page404 from "./Components/Errors/Page404";
+import ForgotPassword from "./Components/Login/Register/ForgotPassword";
 
-class App extends Component {
-  render() {
-    return (
-     <UploadDoc/>
-     //<AccountThirdStep/>
-      //<AccountSecStep/>
-      //<AccountFirstStep/>
-      //<LoginRegister/>
-      //<ExpiredLink/>
-      //<Reset/>
-      // <div className="App">
-      // <Header/>
+const LandingPage = () => {
+  return (
+    <div className="App">
+      <Header />
+      <Main />
+    </div>
+  );
+};
 
-      // <Main>
-      // <BrowserRouter>
-      // <Switch>
-      //       <Route exact={true} path="/" component={ HeaderContents }/>
-      //       <Route  path="./Main/HowItWorks" component={ HowItWorks }/>
-      //       <Route  path="./Main/About" component={ About }/>
-      //       <Route  path="./Main/Contacts" component={ Contacts }/>
-      //   </Switch>
-      // </BrowserRouter>
-      // </Main>  
-      // </div>
-    );
-  }
-}
+const AuthRoute = function({ Component, ...rest }) {
+  return (
+    <Route
+      {...rest}
+      render={() =>
+        /*checa se esta logado*/ false ? <Component /> : <LandingPage />
+      }
+    />
+  );
+};
 
-export default App;
+const NonAuthRoute = function({ Component, ...rest }) {
+  return (
+    <Route
+      {...rest}
+      render={() =>
+        /*checa se esta logado*/ false ? <LoggedHome /> : <Component />
+      }
+    />
+  );
+};
+
+// Todas as rotas vão ser tratadas na App.js
+export default () => (
+  <BrowserRouter>
+    <div>
+      <Switch>
+        <AuthRoute exact path="/" Component={LoggedHome} />
+        <NonAuthRoute exact path="/" Component={LandingPage} />
+        <NonAuthRoute exact path="/loginRegister" Component={LoginRegister} />
+        <NonAuthRoute
+          exact
+          path="/registerStepOne"
+          Component={RegisterStepOne}
+        />
+        <NonAuthRoute exact path="/forgotPassword" Component={ForgotPassword} />
+        <Route component={Page404} />
+      </Switch>
+    </div>
+  </BrowserRouter>
+);
