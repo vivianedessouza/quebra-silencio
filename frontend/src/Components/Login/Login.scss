@@ -1,3 +1,5 @@
+/************Variables************/
+
 $purple-color: #806ad9;
 $purple-back: #7e64eb;
 $gray-color: #eeebfb;
@@ -7,11 +9,34 @@ $textarea-color: #c5bbef;
 $Montserrat: Montserrat, Bold Italic;
 $medium-size: 20px;
 
-
+/************Styles login************/
 
 .container {
   background-color: $purple-back;
   display: table;
+
+  .start--registration {
+    background-color: $gray-color;
+    width: 500px;
+    height: 802px;
+    margin-right: 152px;
+    margin-bottom: 141px;
+    margin-left: 0px;
+    float: right;
+    text-align: center;
+  }
+
+  .start--section {
+    background-color: $white-color;
+    width: 500px;
+    height: 802px;
+    float: left;
+    margin-left: 152px;
+    padding: 0 20px 0 20px;
+    text-align: center;
+  }
+
+  /************Text************/
 
   .logo {
     color: $white-color;
@@ -28,16 +53,6 @@ $medium-size: 20px;
     text-align: center;
   }
 
-  .start--section {
-    background-color: $white-color;
-    width: 500px;
-    height: 802px;
-    float: left;
-    margin-left: 152px;
-    padding: 0 20px 0 20px;
-    text-align: center;
-  }
-
   .title {
     text-align: center;
     color: $purple-color;
@@ -45,6 +60,13 @@ $medium-size: 20px;
     font-size: 34px;
     margin-top: 147px;
   }
+  .text-purple {
+    font-size: 16px;
+    color: $purple-color;
+    margin-top: 62px;
+  }
+
+  /************Input************/
 
   .input--username {
     width: 414.15px;
@@ -66,9 +88,13 @@ $medium-size: 20px;
     margin-bottom: 134px;
     margin: 0 auto;
     display: block;
-    margin-bottom: 139px;
   }
 
+  .input-login-form {
+    display: absolute;
+  }
+
+  /************Button************/
   .btn-purple {
     padding: 19px 44px;
     width: 234px;
@@ -92,44 +118,18 @@ $medium-size: 20px;
     width: 230px;
   }
 
-  .start--registration {
-    background-color: $gray-color;
-    width: 500px;
-    height: 802px;
-    margin-right: 152px;
-    margin-bottom: 141px;
-    margin-left: 0px;
-    float: right;
-    text-align: center;
-  }
-
-  .text-purple {
-    font-size: 16px;
-    color: $purple-color;
-    margin-top: 62px;
-  }
-
   .btn-register {
     margin-top: 240px;
     cursor: pointer;
     color: $white-color;
   }
-  .alert {
-    font-size: 13px;
-    color: #fff;
-    font-family: Montserrat, Bold Italic;
-    background-color: #bb61ff;
-  }
 
-  .alert-danger {
-    position: relative;
-    padding: 0.75rem 1.25rem;
-    margin-bottom: 1rem;
-    border: 1px solid transparent;
-    border-radius: 0.25rem;
-    width: 297px;
-    margin: 0 auto;
+  .btn-login {
+    margin-top: 50px;
   }
+}
 
-  
+/*****Alert Position*****/
+.alert--position {
+  margin-top: 25px;
 }

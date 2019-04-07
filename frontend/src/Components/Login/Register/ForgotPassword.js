@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Register.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Icon from "./../../common/Icon";
 
 class ForgotPassword extends Component {
   render() {
@@ -16,12 +16,13 @@ class ForgotPassword extends Component {
             receber link de reposição de palavra-passe na sua inbox.
           </p>
           <span className="input--email">
-          <FontAwesomeIcon icon="envelope" style={{ color: '#C5BBEF' }} />
-          <input
-            type="text"
-            name="email"
-            placeholder="E-mail"
-          />
+            <Icon icon="envelope" className="input-icon" />
+            <input
+              className="input-text"
+              type="text"
+              name="email"
+              placeholder="E-mail"
+            />
           </span>
           <div>
             <button className="btn-purple btn-register">Enviar</button>

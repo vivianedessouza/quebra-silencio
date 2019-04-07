@@ -12,17 +12,6 @@ import RegisterStepThreeProfessional from "./Components/Login/Register/RegisterS
 import RegisterStepThreeVictim from "./Components/Login/Register/RegisterStepThreeVictim";
 import Page404 from "./Components/Errors/Page404";
 import ForgotPassword from "./Components/Login/Register/ForgotPassword";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-  faLock,
-  faUser,
-  faEnvelope,
-  faCheck,
-  faMap,
-  faUpload,
-  faPhone
-} from "@fortawesome/free-solid-svg-icons";
-library.add(faLock, faUser, faEnvelope, faCheck, faMap, faUpload, faPhone);
 
 const LandingPage = () => {
   return (
@@ -49,6 +38,7 @@ const AuthRoute = function({ Component, ...props }) {
 };
 
 const NonAuthRoute = function({ Component, ...props }) {
+  console.log(props.location.state);
   return (
     <Route
       {...props}

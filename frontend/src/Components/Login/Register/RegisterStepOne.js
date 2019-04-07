@@ -1,13 +1,61 @@
 import React, { Component } from "react";
-import { withRouter, Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { withRouter } from "react-router-dom";
+import Icon from "./../../common/Icon";
 import "./Register.scss";
 
 class RegisterStepOne extends Component {
-  handleUsersButton = isProfessional => {
+  constructor(props) {
+    super(props);
+    this.state = {
+      victimStyle: "btn-users",
+      psychologistStyle: "btn-users",
+      lawyerStyle: "btn-users",
+      isProfessional: undefined,
+      errorMessage: ""
+    };
+  }
+
+  chooseAccountType = (isProfessional, professionalType) => {
+    let lawyer,
+      psychologist,
+      victim = "";
+
+    switch (professionalType) {
+      case "lawyer":
+        lawyer = "btn-users-selected";
+        psychologist = "btn-users";
+        victim = "btn-users";
+        break;
+      case "psychologist":
+        lawyer = "btn-users";
+        psychologist = "btn-users-selected";
+        victim = "btn-users";
+        break;
+      default:
+        lawyer = "btn-users";
+        psychologist = "btn-users";
+        victim = "btn-users-selected";
+        break;
+    }
+
+    this.setState({
+      lawyerStyle: lawyer,
+      psychologistStyle: psychologist,
+      victimStyle: victim,
+      errorMessage: "",
+      isProfessional
+    });
+  };
+
+  goToNextPage = () => {
+    if (this.state.isProfessional === undefined) {
+      this.setState({ errorMessage: "Escolha o tipo de conta." });
+      return;
+    }
+
     this.props.history.push({
       pathname: "/registerStepTwo",
-      state: { isProfessional: isProfessional }
+      state: { isProfessional: this.state.isProfessional }
     });
   };
 
@@ -25,31 +73,45 @@ class RegisterStepOne extends Component {
             aconselhamento psicológico ou … Quer ajudar….
           </p>
           <div
-            className="btn-users"
-            onClick={() => this.handleUsersButton(false)}
+            className={this.state.victimStyle}
+            onClick={() => this.chooseAccountType(false, null)}
           >
             <p>Vítima</p>
-            <FontAwesomeIcon icon="check" />
+            {this.state.victimStyle === "btn-users-selected" && (
+              <Icon className="icon-check" icon="check" />
+            )}
           </div>
           <div
-            className="btn-users"
-            onClick={() => this.handleUsersButton(true)}
+            className={this.state.psychologistStyle}
+            onClick={() => this.chooseAccountType(true, "psychologist")}
           >
             <p>Psicólogo(a)</p>
-            <FontAwesomeIcon icon="check" />
+            {this.state.psychologistStyle === "btn-users-selected" && (
+              <Icon className="icon-check" icon="check" />
+            )}
           </div>
           <div
-            className="btn-users"
-            onClick={() => this.handleUsersButton(true)}
+            className={this.state.lawyerStyle}
+            onClick={() => this.chooseAccountType(true, "lawyer")}
           >
             <p>Advogado(a)</p>
-            <FontAwesomeIcon icon="check" />
+            {this.state.lawyerStyle === "btn-users-selected" && (
+              <Icon className="icon-check" icon="check" />
+            )}
           </div>
           <div>
-            <Link to={"registerStepTwo"} className="next--step">
+            {this.state.errorMessage && (
+              <div className="alert alert-danger alert--position">
+                <strong>Oops!</strong> {this.state.errorMessage}
+              </div>
+            )}
+            <p
+              onClick={() => this.goToNextPage()}
+              className="next--step"
+            >
               Passo seguinte
               <hr />
-            </Link>
+            </p>
           </div>
         </div>
       </div>

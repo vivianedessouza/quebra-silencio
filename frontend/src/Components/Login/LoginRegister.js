@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { withRouter, Link } from "react-router-dom";
 import "./Login.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { get } from "http";
+import Icon from "./../common/Icon";
 
 class LoginRegister extends Component {
   constructor(props) {
@@ -26,18 +25,18 @@ class LoginRegister extends Component {
       return;
     }
 
-    //Aqui chama o backend
+    //Aqui será necessário chamar o backend com a joana
   };
 
   validateInputSignIn = (username, password) => {
     let message = "";
 
     if (!username && !password) {
-      message = "Preencha o username e password.";
+      message = "Preencha o username e palavra-passe.";
     } else if (!username) {
       message = "Preencha o username.";
     } else if (!password) {
-      message = "Preencha o password.";
+      message = "Preencha o palavra-passe.";
     }
 
     this.setState({ errorMessage: message });
@@ -50,30 +49,40 @@ class LoginRegister extends Component {
           Quebra <span className="color-purple">o Silêncio</span>
         </h1>
         <div className="start--section">
-          <h1 className="title">Inicie a sua Sessão</h1>
-          <div className="input--username">
-          <FontAwesomeIcon icon="user" style={{ color: '#C5BBEF' }} />
-          <input
-            type="text"
-            placeholder="Utilizador"
-            onChange={event => this.setState({ username: event.target.value })}
-          />
-          </div>
-          <div className="input--password">
-          <FontAwesomeIcon icon="lock" style={{ color: '#C5BBEF' }} />
-          <input
-            type="password"
-            placeholder="Palavra-passe"
-            onChange={event => this.setState({ password: event.target.value })}
-          />
-          </div>
-          {this.state.errorMessage && (
-            <div className="alert alert-danger">
-              <strong>Oops!</strong> {this.state.errorMessage}
+          <div className="input-login-form">
+            <h1 className="title">Inicie a sua Sessão</h1>
+            <div className="input--username">
+              <Icon icon="user" className="input-icon" />
+              <input
+                className="input-text"
+                type="text"
+                placeholder="Username"
+                onChange={event =>
+                  this.setState({ username: event.target.value })
+                }
+              />
             </div>
-          )}
+            <div className="input--password">
+              <Icon icon="lock" className="input-icon" />
+              <input
+                className="input-text"
+                type="password"
+                placeholder="Palavra-passe"
+                onChange={event =>
+                  this.setState({ password: event.target.value })
+                }
+              />
+            </div>
+
+            {this.state.errorMessage && (
+              <div className="alert alert-danger alert--position">
+                <strong>Oops!</strong> {this.state.errorMessage}
+              </div>
+            )}
+          </div>
+
           <button
-            className="btn-purple color-white"
+            className="btn-purple color-white btn-login"
             onClick={() => this.handleSignIn()}
           >
             <a className="btn-style">Iniciar Sessão</a>

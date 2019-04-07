@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Icon from "./../../common/Icon";
+import { withRouter, Link } from "react-router-dom";
 import "./Register.scss";
 
 class RegisterStepThreeProfessional extends Component {
@@ -8,30 +10,36 @@ class RegisterStepThreeProfessional extends Component {
         <h1 className="logo">
           Quebra <span className="color-purple">o Silêncio</span>
         </h1>
-        <div className="main--section">
+        <div className="main--section position-center">
           <h1 className="title">Crie a sua Conta</h1>
           <p className="steps">Passo 3 de 3</p>
           <p className="text">Preencher dados - Documentos</p>
-          <input
-            type="text"
-            name="image"
-            id="image"
-            className="state--input"
-            placeholder="Upload - Foto de Perfil (Opcional)"
-          />
+          <span className="file--input input-document">
+            <p>Upload - Documentos</p>
+          </span>
           <p className="information">
             Informação de que a conta ficará pendente até os documentação ficar
             aprovada
           </p>
           <div>
-            <a href="" className="next--step">
+            <Link to="" className="next--step">
               Passo seguinte
-            </a>
+              <hr />
+            </Link>
           </div>
           <div>
-            <a href="" className="back--step">
+            <Link
+              to={{
+                pathname: "/registerStepTwo",
+                state: {
+                  isProfessional: this.props.location.state.isProfessional
+                }
+              }}
+              className="back--step"
+            >
               Voltar Atrás
-            </a>
+              <hr />
+            </Link>
           </div>
         </div>
       </div>
@@ -39,4 +47,4 @@ class RegisterStepThreeProfessional extends Component {
   }
 }
 
-export default RegisterStepThreeProfessional;
+export default withRouter(RegisterStepThreeProfessional);
