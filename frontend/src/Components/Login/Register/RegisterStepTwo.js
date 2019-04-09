@@ -1,11 +1,21 @@
 import React, { Component } from "react";
 import Icon from "./../../common/Icon";
-import { withRouter, Link } from "react-router-dom";
+import { withRouter, Link, Fragment} from "react-router-dom";
+import Validate from "react-validate-form";
 import "./Register.scss";
 
 class RegisterStepTwo extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      name: "",
+      username: "",
+      password:"",
+      passwordConfirm: "",
+      email: "",
+      phone:"",
+
+    };
   }
 
   render() {
@@ -33,12 +43,17 @@ class RegisterStepTwo extends Component {
             </span>
             <span className="fill--input input-right">
               <Icon icon="user" className="input-icon" />
-              <input
+              <Validate>
+              {({ validate, errorMessages }) => (
+                
+              <input onChange={validate} required
                 className="input-text"
                 type="text"
                 name="username"
                 placeholder="Username"
-              />
+              />             
+              )}
+              </Validate>
             </span>
             <span className="fill--input input-left">
               <Icon icon="lock" className="input-icon" />
@@ -54,7 +69,7 @@ class RegisterStepTwo extends Component {
               <input
                 className="input-text"
                 type="text"
-                name="password--confirm"
+                name="passwordConfirm"
                 placeholder="Confirmar Palavra-passe"
               />
             </span>
@@ -76,17 +91,18 @@ class RegisterStepTwo extends Component {
                 placeholder="Contacto Telefónico (Opcional)"
               />
             </span>
-            <span className="fill--input input-left">
+            <select include="form-input-select()" required className="fill--input input-left form-input-select">
               <Icon icon="map" className="input-icon" />
-              <input
-                className="input-text"
-                type="text"
-                name="localidade"
-                placeholder="Localidade"
-              />
-            </span>
+              <option value="" hidden>Localidade - Distrito</option>
+              <option value="Lisboa">Lisboa</option>
+              <option value="Porto">Porto</option>
+              <option value="Aveiro">Aveiro</option>
+            </select>
             <span className="file--input input-right">
-              <Icon icon="upload" className="input-icon input-icon-formatting" />
+              <Icon
+                icon="upload"
+                className="input-icon input-icon-formatting"
+              />
               <input
                 className="input-text text-formatting"
                 type="text"

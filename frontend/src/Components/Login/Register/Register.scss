@@ -1,3 +1,5 @@
+// Demo Colors, font and size
+
 $purple-color: #806ad9;
 $light-purple-color: #9f8deb;
 $rainbow-color: #bb61ff;
@@ -7,17 +9,26 @@ $dark-gray-color: #7f7f80;
 $white-color: #fff;
 $textarea-color: #c5bbef;
 $Montserrat: Montserrat, Bold Italic;
-$medium-size: 20px;
+$medium-size: 16px;
+$small-size: 13px;
+$big-size:20px;
+$null:0px;
+$small-border: 1px;
+$medium-border: 3px;
+$big-border:41px;
+
 
 .external--container {
   background-color: $purple-back;
   background-size: cover;
-  margin: 0;
+  margin: $null;
   padding-bottom: 137px;
+  background-image: linear-gradient(#614fad 85%, #7f4eb8);
+
 
   .main--section {
     background-color: $white-color;
-    margin: 0px 100px 0px 100px;
+    margin: $null 100px $null 100px;
     height: 768px;
   }
 
@@ -28,17 +39,19 @@ $medium-size: 20px;
   .logo {
     color: $white-color;
     font-family: $Montserrat;
-    font-size: $medium-size;
+    font-size: $big-size;
     text-transform: uppercase;
-    padding: 54px 0 54px;
+    padding: 54px $null 54px;
     text-align: center;
   }
 
   .color-purple {
     color: $light-purple-color;
     text-transform: uppercase;
+    
   }
 
+  
   .title {
     text-align: center;
     color: $purple-color;
@@ -49,9 +62,9 @@ $medium-size: 20px;
 
   .text {
     width: 710px;
-    font-size: 16px;
+    font-size: $medium-size;
     color: $purple-color;
-    margin: 0 auto;
+    margin: $null auto;
     padding-top: 30px;
   }
 
@@ -59,8 +72,8 @@ $medium-size: 20px;
     width: 414.15px;
     background-color: $gray-color;
     font-size: 13px;
-    padding: 20px;
-    margin: 0 auto;
+    padding: $big-size;
+    margin: $null auto;
     display: block;
     margin-top: 59px;
     margin-bottom: 61px;
@@ -71,6 +84,7 @@ $medium-size: 20px;
     margin-top: 62px;
     color: $white-color;
     height: 50px;
+    background-image: linear-gradient(#614fad 85%, #7f4eb8);
   }
 
   .steps {
@@ -83,7 +97,7 @@ $medium-size: 20px;
   .btn-professional {
     width: 350px;
     height: 57px;
-    border: 0;
+    border: $null;
     background-color: $purple-color;
     margin-right: 30px;
     margin-top: 79px;
@@ -96,7 +110,7 @@ $medium-size: 20px;
     margin-left: 237px;
     display: inline-block;
     position: relative;
-    top: -20px;
+    top: -$big-size;
   }
 
   .btn-users {
@@ -111,7 +125,7 @@ $medium-size: 20px;
     margin-top: 70px;
 
     p {
-      padding: 5% 1em 0;
+      padding: 5% 1em $null;
       font-size: 19px;
       color: $white-color;
       font-family: $Montserrat;
@@ -132,7 +146,7 @@ $medium-size: 20px;
     margin-top: 70px;
 
     p {
-      padding: 5% 1em 0;
+      padding: 5% 1em $null;
       font-size: 19px;
       color: $white-color;
       font-family: $Montserrat;
@@ -168,7 +182,7 @@ $medium-size: 20px;
     width: 414.15px;
     background-color: #eeebfb;
     font-size: 13px;
-    padding: 20px;
+    padding: $big-size;
     margin-bottom: 10px;
   }
 
@@ -199,10 +213,10 @@ $medium-size: 20px;
     width: 551px;
     height: 134px;
     font-size: 13px;
-    border: 0;
+    border: $null;
     padding: 15px;
     margin-top: 15px;
-    border-radius: 1px;
+    border-radius: $small-border;
     margin-right: 24px;
   }
 
@@ -220,9 +234,9 @@ $medium-size: 20px;
     border-radius: 1px;
 
     p {
-      font-size: 16px;
+      font-size: $medium-size;
       color: $purple-color;
-      padding: 20px;
+      padding: $big-size;
       text-align: center;
     }
   }
@@ -233,10 +247,19 @@ $medium-size: 20px;
 
   .text-formatting {
     margin-left: 5px;
-    margin-top: 20px;
+    margin-top: $big-size;
   }
 
   .input-icon-formatting {
     margin-left: 13px;
   }
+
+  select {
+    border: $null;
+    border-radius: $small-border;
+
+
+  }
+
+
 }
