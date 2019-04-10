@@ -3,7 +3,6 @@ import { withRouter, Link } from "react-router-dom";
 import Icon from "./../../common/Icon";
 import "./Register.scss";
 
-
 class RegisterStepThreeVictim extends Component {
   constructor(props) {
     super(props);
@@ -48,7 +47,6 @@ class RegisterStepThreeVictim extends Component {
     });
   };
 
-
   render() {
     return (
       <div className="external--container">
@@ -62,24 +60,22 @@ class RegisterStepThreeVictim extends Component {
           <div>
             <div
               className={this.state.psychologistStyle}
-            onClick={() => this.chooseAccountType(true, "psychologist")}
-             
+              onClick={() => this.chooseAccountType(true, "psychologist")}
             >
               <p>Psicólogo(a)</p>
               {this.state.psychologistStyle === "btn-users-selected" && (
-              <Icon className="icon-check" icon="check" />
-            )}
+                <Icon className="icon-check" icon="check" />
+              )}
             </div>
             <div
-               className={this.state.lawyerStyle}
-            onClick={() => this.chooseAccountType(true, "lawyer")}
-              
+              className={this.state.lawyerStyle}
+              onClick={() => this.chooseAccountType(true, "lawyer")}
             >
               <p>Advogado(a)</p>
 
               {this.state.lawyerStyle === "btn-users-selected" && (
-              <Icon className="icon-check" icon="check" />
-            )}
+                <Icon className="icon-check" icon="check" />
+              )}
             </div>
           </div>
           <textarea className="situation--description">
@@ -87,29 +83,32 @@ class RegisterStepThreeVictim extends Component {
             profissionais que a possam ajudar
           </textarea>
           <div className="fill--input input-left input-formatting">
-          <Icon icon="info" className="input-icon" />
-          <input
-            type="text"
-            className="input-text"
-            name="state"
-            placeholder="Estado Civil"
-          />
+            <Icon icon="info" className="input-icon" />
+            <input
+              type="text"
+              className="input-text"
+              name="state"
+              placeholder="Estado Civil"
+            />
           </div>
           <div>
             <Link to={"/chat"} className="next--step">
-              Passo seguinte
-              <hr/>
+              Enviar
+              <hr />
             </Link>
           </div>
           <div>
-            <Link to={{
+            <Link
+              to={{
                 pathname: "/registerStepTwo",
                 state: {
                   isProfessional: this.props.location.state.isProfessional
                 }
-              }} className="back--step">
+              }}
+              className="back--step"
+            >
               Voltar Atrás
-              <hr/>
+              <hr />
             </Link>
           </div>
         </div>

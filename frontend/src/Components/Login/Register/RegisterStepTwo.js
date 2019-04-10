@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Icon from "./../../common/Icon";
-import { withRouter, Link, Fragment} from "react-router-dom";
+import { withRouter, Link} from "react-router-dom";
 import Validate from "react-validate-form";
 import "./Register.scss";
 

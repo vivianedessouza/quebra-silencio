@@ -94,6 +94,18 @@ $medium-size: 20px;
     display: absolute;
   }
 
+  .input--password:focus {
+    outline: none;
+  }
+
+  textarea:focus,
+  input:focus,
+  button:focus,
+  label:focus {
+    outline: 0px !important;
+    -webkit-appearance: none;
+  }
+
   /************Button************/
   .btn-purple {
     padding: 19px 44px;
@@ -126,6 +138,11 @@ $medium-size: 20px;
 
   .btn-login {
     margin-top: 50px;
+  }
+
+  .btn-login:focus,
+  .btn-register:focus {
+    outline: none;
   }
 }
 

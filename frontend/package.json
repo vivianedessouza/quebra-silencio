@@ -13,7 +13,6 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
-    "react-dot-fragment": "^0.2.9",
     "react-iframe": "^1.5.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",

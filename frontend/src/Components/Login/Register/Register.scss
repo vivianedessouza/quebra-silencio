@@ -87,6 +87,14 @@ $big-border:41px;
     background-image: linear-gradient(#614fad 85%, #7f4eb8);
   }
 
+  textarea:focus,
+  input:focus,
+  button:focus,
+  label:focus,
+  .file--input:focus {
+    outline: 0px !important;
+    -webkit-appearance: none;
+  }
   .steps {
     font-size: 19px;
     color: $light-purple-color;
@@ -163,6 +171,7 @@ $big-border:41px;
     position: absolute;
     right: 148px;
     bottom: -217px;
+    cursor: pointer;
   }
 
   .back--step {
