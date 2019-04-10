@@ -105,10 +105,7 @@ class RegisterStepOne extends Component {
                 <strong>Oops!</strong> {this.state.errorMessage}
               </div>
             )}
-            <p
-              onClick={() => this.goToNextPage()}
-              className="next--step"
-            >
+            <p onClick={() => this.goToNextPage()} className="next--step">
               Passo seguinte
               <hr />
             </p>

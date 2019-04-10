@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter, Link } from "react-router-dom";
 import Img from "../../images/img.png";
 
 export class HowWorks extends Component {
@@ -20,7 +21,7 @@ export class HowWorks extends Component {
               </a>
             </p>
             <div className="flex btn-purple">
-              <a href="#">Regist-se Aqui</a>
+              <Link to={'loginRegister'}>Regist-se Aqui</Link>
             </div>
           </div>
         </article>
@@ -33,4 +34,4 @@ export class HowWorks extends Component {
   }
 }
 
-export default HowWorks;
+export default withRouter(HowWorks);

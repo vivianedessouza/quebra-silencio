@@ -73,6 +73,14 @@ $medium-size: 20px;
     height: 50px;
   }
 
+  textarea:focus,
+  input:focus,
+  button:focus,
+  label:focus,
+  .file--input:focus {
+    outline: 0px !important;
+    -webkit-appearance: none;
+  }
   .steps {
     font-size: 19px;
     color: $light-purple-color;
@@ -149,6 +157,7 @@ $medium-size: 20px;
     position: absolute;
     right: 148px;
     bottom: -217px;
+    cursor: pointer;
   }
 
   .back--step {

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Icon from "./../../common/Icon";
+import Dropzone from "react-dropzone";
 import { withRouter, Link } from "react-router-dom";
 import "./Register.scss";
 
@@ -86,7 +87,10 @@ class RegisterStepTwo extends Component {
               />
             </span>
             <span className="file--input input-right">
-              <Icon icon="upload" className="input-icon input-icon-formatting" />
+              <Icon
+                icon="upload"
+                className="input-icon input-icon-formatting"
+              />
               <input
                 className="input-text text-formatting"
                 type="text"
