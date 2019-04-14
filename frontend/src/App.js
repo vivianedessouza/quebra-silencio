@@ -12,6 +12,7 @@ import RegisterStepThreeProfessional from "./Components/Login/Register/RegisterS
 import RegisterStepThreeVictim from "./Components/Login/Register/RegisterStepThreeVictim";
 import Page404 from "./Components/Errors/Page404";
 import ForgotPassword from "./Components/Login/Register/ForgotPassword";
+import EditProfile from "./Components/Login/Register/EditProfile";
 
 const LandingPage = () => {
   return (
@@ -27,7 +28,7 @@ const AuthRoute = function({ Component, ...props }) {
     <Route
       {...props}
       render={() =>
-        /*checa se esta logado*/ false ? (
+        /*TODO: checa se esta logado*/ true ? (
           <Component {...props} />
         ) : (
           <LandingPage />
@@ -43,7 +44,7 @@ const NonAuthRoute = function({ Component, ...props }) {
     <Route
       {...props}
       render={() =>
-        /*checa se esta logado*/ false ? (
+        /*TODO: checa se esta logado*/ false ? (
           <LoggedHome />
         ) : (
           <Component {...props} />
@@ -58,7 +59,7 @@ export default () => (
   <BrowserRouter>
     <div>
       <Switch>
-        <AuthRoute exact path="/" Component={LoggedHome} />
+        <AuthRoute exact path="/loggedHome" Component={LoggedHome} />
         <NonAuthRoute exact path="/" Component={LandingPage} />
         <NonAuthRoute exact path="/loginRegister" Component={LoginRegister} />
         <NonAuthRoute
@@ -82,6 +83,7 @@ export default () => (
           Component={RegisterStepThreeVictim}
         />
         <NonAuthRoute exact path="/forgotPassword" Component={ForgotPassword} />
+        <NonAuthRoute exact path="/editProfile" Component={EditProfile} />
         <Route component={Page404} />
       </Switch>
     </div>

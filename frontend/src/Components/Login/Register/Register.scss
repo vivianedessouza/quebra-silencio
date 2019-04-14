@@ -11,12 +11,11 @@ $textarea-color: #c5bbef;
 $Montserrat: Montserrat, Bold Italic;
 $medium-size: 16px;
 $small-size: 13px;
-$big-size:20px;
-$null:0px;
+$big-size: 20px;
+$null: 0px;
 $small-border: 1px;
 $medium-border: 3px;
-$big-border:41px;
-
+$big-border: 41px;
 
 .external--container {
   background-color: $purple-back;
@@ -24,7 +23,6 @@ $big-border:41px;
   margin: $null;
   padding-bottom: 137px;
   background-image: linear-gradient(#614fad 85%, #7f4eb8);
-
 
   .main--section {
     background-color: $white-color;
@@ -48,10 +46,8 @@ $big-border:41px;
   .color-purple {
     color: $light-purple-color;
     text-transform: uppercase;
-    
   }
 
-  
   .title {
     text-align: center;
     color: $purple-color;
@@ -266,9 +262,5 @@ $big-border:41px;
   select {
     border: $null;
     border-radius: $small-border;
-
-
   }
-
-
 }

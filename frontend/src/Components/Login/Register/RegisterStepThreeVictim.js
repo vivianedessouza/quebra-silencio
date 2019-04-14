@@ -92,7 +92,7 @@ class RegisterStepThreeVictim extends Component {
             />
           </div>
           <div>
-            <Link to={"/chat"} className="next--step">
+            <Link to={"/loggedHome"} className="next--step">
               Enviar
               <hr />
             </Link>

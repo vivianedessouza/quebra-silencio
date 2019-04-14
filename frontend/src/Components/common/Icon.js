@@ -9,9 +9,28 @@ import {
   faMap,
   faUpload,
   faPhone,
-  faInfo, faChevronDown
+  faInfo,
+  faChevronDown,
+  faCommentDots,
+  faBookOpen,
+  faAngleDoubleDown,
+  faAngleDoubleUp
 } from "@fortawesome/free-solid-svg-icons";
-library.add(faLock, faUser, faEnvelope, faCheck, faMap, faUpload, faPhone, faInfo, faChevronDown);
+library.add(
+  faLock,
+  faUser,
+  faEnvelope,
+  faCheck,
+  faMap,
+  faUpload,
+  faPhone,
+  faInfo,
+  faChevronDown,
+  faCommentDots,
+  faBookOpen,
+  faAngleDoubleDown,
+  faAngleDoubleUp
+);
 
 class Icon extends Component {
   render() {
