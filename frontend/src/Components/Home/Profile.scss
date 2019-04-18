@@ -94,7 +94,7 @@ $big-border: 41px;
     -webkit-appearance: none;
   }
 
-  #main {
+  #top-bar-buttom {
     transition: margin-left 0.5s;
   }
 
@@ -196,6 +196,7 @@ $big-border: 41px;
   background-image: linear-gradient(#614fad 85%, #7f4eb8);
   overflow-x: hidden;
   transition: 0.5s;
+  z-index: 1;
 
   ul {
     display: block;
@@ -231,10 +232,10 @@ $big-border: 41px;
   }
 }
 
-.barra-lateral {
+.side-bar-color {
   position: absolute;
   width: 88px;
-  height: 100%;
+  height: 100vh;
   background-image: linear-gradient(#614fad 85%, #7f4eb8);
 }
 
@@ -309,4 +310,167 @@ $big-border: 41px;
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
   right: 0px;
+}
+
+/* edit profile */
+
+.edit-container {
+  background-color: #eeebfb;
+  margin-left: 88px;
+  height: 100vh;
+
+  .edit-personal-information {
+    height: 40vh;
+    background-color: $white-color;
+    padding: 40px;
+
+    .upload-image {
+      border: 1px dashed #5533e2;
+      background-color: $white-color;
+      height: 230px;
+      width: 230px;
+      border-radius: 50%;
+      cursor: pointer;
+
+      p {
+        text-align: center;
+        margin-top: 100px;
+        color: #806ad9;
+        font-size: $medium-size;
+        font-family: $Montserrat;
+      }
+    }
+    .remove-photo {
+      color: #ff7df2;
+      margin-left: 50px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .form-edit-profile {
+      position: absolute;
+      float: right;
+      margin-left: 227px;
+      padding: 50px;
+      top: 100px;
+      display: block;
+    }
+    .input-edit-profile {
+      box-shadow: 0 0 0 0;
+      border: 0 none;
+      outline: 0;
+      border-bottom: 1px solid #c5bbef;
+      width: 300px;
+      margin-right: 10px;
+    }
+
+    label {
+      font-size: 10px;
+      color: #c5bbef;
+      display: block;
+    }
+  }
+
+  .input-edit-email-phone {
+    display: flex;
+
+    input {
+      box-shadow: 0 0 0 0;
+      border: 0 none;
+      outline: 0;
+      border-bottom: 1px solid #c5bbef;
+      margin-right: 45px;
+      margin-top: 10px;
+    }
+  }
+
+  .contact-label {
+    display: flex;
+  }
+
+  .estado-civil {
+    float: right;
+    margin-top: -25px;
+    margin-right: 90px;
+  }
+  .section-option {
+    display: inline;
+  }
+  .civil-option {
+    float: right;
+    margin-top: -42px;
+    margin-right: 80px;
+    margin-left: 50px;
+  }
+
+  select {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    width: 110px;
+    color: #7e64eb;
+    height: 30px;
+  }
+  .save-changes-btn {
+    float: right;
+    background-color: #eeebfb;
+    border-radius: 30px;
+    text-align: center;
+    position: absolute;
+    margin-right: 30px;
+    right: 0px;
+    top: 120px;
+    cursor: pointer;
+
+    p {
+      padding: 15px;
+      color: #7e64eb;
+      font-size: 16px;
+    }
+  }
+
+  .discart-changes-btn {
+    float: right;
+    background-color: #eeebfb;
+    border-radius: 30px;
+    text-align: center;
+    position: absolute;
+    right: 120px;
+    top: 120px;
+    margin-right: 100px;
+    cursor: pointer;
+    p {
+      padding: 15px;
+      color: #7e64eb;
+      font-size: 16px;
+    }
+  }
+}
+
+.description-edit {
+  padding: 40px;
+  color: #806ad9;
+  font-size: 29px;
+}
+
+.edit-text {
+  margin: 0 40px 0 40px;
+  background-color: $white-color;
+  border-radius: 3px;
+  height: 100px;
+  padding: 20px;
+
+  input {
+    box-shadow: 0 0 0 0;
+    border: 1px solid #c5bbef;
+    outline: 0;
+    width: 100%;
+    height: 90px;
+  }
+}
+.edit-footer-information {
+  color: #7e64eb;
+  font-size: 13px;
+  font-style: italic;
+  margin-left: 40px;
+  margin-top: 20px;
 }

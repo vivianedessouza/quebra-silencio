@@ -74,7 +74,9 @@ class PanelStatus extends Component {
             </div>
           </li>
           <hr />
-          <Link to="/editProfile" className="edit-item">Editar Perfil</Link>
+          <li className="edit-item">
+            <Link to="/editProfile">Editar Perfil</Link>
+          </li>
           <hr />
           <li className="edit-item">Terminar sessão</li>
         </ul>
