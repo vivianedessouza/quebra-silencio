@@ -39,7 +39,7 @@ export class MySideBar extends Component {
           </h1>
           <div className="separator" />
           <Icon className="icon-logged" icon="book-open" />
-          <Link to="" className="aside-link" href="#">
+          <Link to="/process" className="aside-link" href="#">
             Processo
           </Link>
           <Icon className="icon-logged" icon="comment-dots" />
