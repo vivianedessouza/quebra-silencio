@@ -12,7 +12,7 @@ import RegisterStepThreeProfessional from "./Components/Login/Register/RegisterS
 import RegisterStepThreeVictim from "./Components/Login/Register/RegisterStepThreeVictim";
 import Page404 from "./Components/Errors/Page404";
 import ForgotPassword from "./Components/Login/Register/ForgotPassword";
-import EditProfile from "./Components/Login/Register/EditProfile";
+import EditProfile from "./Components/Home/EditProfile";
 
 const LandingPage = () => {
   return (
@@ -83,7 +83,7 @@ export default () => (
           Component={RegisterStepThreeVictim}
         />
         <NonAuthRoute exact path="/forgotPassword" Component={ForgotPassword} />
-        <NonAuthRoute exact path="/editProfile" Component={EditProfile} />
+        <AuthRoute exact path="/editProfile" Component={EditProfile} />
         <Route component={Page404} />
       </Switch>
     </div>
