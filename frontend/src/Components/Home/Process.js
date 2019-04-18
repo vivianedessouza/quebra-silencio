@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import LoggedHome from "./LoggedHome";
 import PanelStatus from "./PanelStatus";
 
-export class Process extends Component {
+export class  extends Component {
   render() {
     return (
       <div>
@@ -14,4 +14,4 @@ export class Process extends Component {
   }
 }
 
-export default Process
+export default 
