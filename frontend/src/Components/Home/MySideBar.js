@@ -43,9 +43,9 @@ export class MySideBar extends Component {
             Processo
           </Link>
           <Icon className="icon-logged" icon="comment-dots" />
-          <a className="aside-link" href="#">
+          <Link to="/victimChat" className="aside-link" href="#">
             Chat | Menssagens
-          </a>
+          </Link>
         </div>
         <div className="side-bar-color" />
       </div>

@@ -14,6 +14,9 @@ import Page404 from "./Components/Errors/Page404";
 import ForgotPassword from "./Components/Login/Register/ForgotPassword";
 import EditProfile from "./Components/Home/EditProfile";
 import Process from "./Components/Home/Process";
+import VictimProfile from "./Components/Home/VictimProfile";
+import ProfessionalProfile from "./Components/Home/ProfessionalProfile";
+import VictimChat from "./Components/Home/VictimChat";
 
 const LandingPage = () => {
   return (
@@ -86,6 +89,13 @@ export default () => (
         <NonAuthRoute exact path="/forgotPassword" Component={ForgotPassword} />
         <AuthRoute exact path="/editProfile" Component={EditProfile} />
         <AuthRoute exact path="/process" Component={Process} />
+        <AuthRoute exact path="/victimProfile" Component={VictimProfile} />
+        <AuthRoute exact path="/victimChat" Component={VictimChat} />
+        <AuthRoute
+          exact
+          path="/professionalProfile"
+          Component={ProfessionalProfile}
+        />
         <Route component={Page404} />
       </Switch>
     </div>

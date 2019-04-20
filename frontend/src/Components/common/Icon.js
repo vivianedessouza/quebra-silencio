@@ -14,7 +14,12 @@ import {
   faCommentDots,
   faBookOpen,
   faAngleDoubleDown,
-  faAngleDoubleUp
+  faAngleDoubleUp,
+  faChevronRight,
+  faChevronUp,
+  faMapMarkerAlt,
+  faEdit,
+  faSearch
 } from "@fortawesome/free-solid-svg-icons";
 library.add(
   faLock,
@@ -29,7 +34,12 @@ library.add(
   faCommentDots,
   faBookOpen,
   faAngleDoubleDown,
-  faAngleDoubleUp
+  faAngleDoubleUp,
+  faChevronRight,
+  faChevronUp,
+  faMapMarkerAlt,
+  faEdit,
+  faSearch
 );
 
 class Icon extends Component {

@@ -24,9 +24,9 @@ export class NavBar extends Component {
         </div>
         <div onClick={() => this.handlePanel()}>
           <Icon
-            className="double-down"
+            className="chevron-down"
             icon={
-              this.state.hideShowPanel ? "angle-double-down" : "angle-double-up"
+              this.state.hideShowPanel ? "angle-double-down" : "chevron-down"
             }
           />
         </div>

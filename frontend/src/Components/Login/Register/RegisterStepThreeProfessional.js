@@ -22,7 +22,7 @@ class RegisterStepThreeProfessional extends Component {
             aprovada
           </p>
           <div>
-            <Link to="" className="next--step">
+            <Link to="/professionalProfile" className="next--step">
               Enviar
               <hr />
             </Link>

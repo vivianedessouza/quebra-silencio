@@ -1,8 +1,16 @@
 import React, { Component } from "react";
 import LoggedHome from "./LoggedHome";
+import { withRouter, Link } from "react-router-dom";
 import PanelStatus from "./PanelStatus";
 
 class EditProfile extends Component {
+  constructor(props) {
+    super();
+  }
+
+  handleVictimProfile = () => {
+    this.props.history.push("/victimProfile");
+  };
   render() {
     return (
       <div>
@@ -69,11 +77,14 @@ class EditProfile extends Component {
                 <label for="civil">Estado civil</label>
               </div>
             </form>
-            <div className="save-changes-btn">
-              <p>Guardar Alterões</p>
+            <div
+              className="save-changes-btn"
+              onClick={() => this.handleVictimProfile()}
+            >
+              <p>Guardar Alterações</p>
             </div>
             <div className="discart-changes-btn">
-              <p>Descartar Alterões</p>
+              <p>Descartar Alterações</p>
             </div>
           </div>
           <div className="edit-content" />
@@ -91,4 +102,4 @@ class EditProfile extends Component {
   }
 }
 
-export default EditProfile;
+export default withRouter(EditProfile);
