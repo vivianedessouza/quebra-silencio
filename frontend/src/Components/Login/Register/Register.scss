@@ -87,9 +87,12 @@ $big-border: 41px;
   input:focus,
   button:focus,
   label:focus,
+  select:focus,
+  .input-dropzone:focus,
   .file--input:focus {
     outline: 0px !important;
     -webkit-appearance: none;
+    border: 0px;
   }
   .steps {
     font-size: 19px;
@@ -181,6 +184,7 @@ $big-border: 41px;
   .input--group {
     padding: 109px;
     margin-top: -108px;
+    border-radius: 1px;
   }
 
   .fill--input {
@@ -189,15 +193,18 @@ $big-border: 41px;
     font-size: 13px;
     padding: $big-size;
     margin-bottom: 10px;
+    border-radius: 1px;
   }
 
   .input-left {
     display: block;
+    border-radius: 1px;
   }
 
   .input-right {
     float: right;
     margin-top: -71px;
+    border-radius: 1px;
   }
 
   .file--input {
@@ -206,6 +213,24 @@ $big-border: 41px;
     height: 56.07px;
     font-size: 13px;
     border-color: #806ad9;
+    border-radius: 1px;
+
+    p {
+      color: #7f7f80;
+      font-size: 12px;
+    }
+  }
+
+  .form-input-select {
+    width: 400px;
+    background-color: #eeebfb;
+    font-size: 13px;
+    padding: $big-size;
+    margin-bottom: 10px;
+    border: 0px;
+    border-radius: 1px;
+    color: #7f7f80;
+    font-size: 12px;
   }
 
   .spacer {
@@ -224,6 +249,13 @@ $big-border: 41px;
     border-radius: $small-border;
     margin-right: 24px;
   }
+
+  [contenteditable="true"]:empty:before {
+    content: attr(placeholder);
+    display: block;
+  }
+
+  
 
   .information {
     font-size: 16px;
@@ -247,7 +279,7 @@ $big-border: 41px;
   }
 
   .input-formatting {
-    margin-left: 272px;
+    margin-left: 231px;
   }
 
   .text-formatting {
@@ -257,10 +289,5 @@ $big-border: 41px;
 
   .input-icon-formatting {
     margin-left: 13px;
-  }
-
-  select {
-    border: $null;
-    border-radius: $small-border;
   }
 }

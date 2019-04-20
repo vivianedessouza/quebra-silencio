@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import LoggedHome from "./LoggedHome";
 import { withRouter, Link } from "react-router-dom";
 import PanelStatus from "./PanelStatus";
+import Dropzone from "react-dropzone";
 
 class EditProfile extends Component {
   constructor(props) {
@@ -18,7 +19,21 @@ class EditProfile extends Component {
         <div className="edit-container">
           <div className="edit-personal-information">
             <div className="upload-image">
-              <p>Upload foto de perfil</p>
+              <Dropzone
+                onDrop={acceptedFiles => {
+                  // handle the file
+                  console.log(acceptedFiles);
+                }}
+              >
+                {({ getRootProps, getInputProps }) => (
+                  <section>
+                    <div {...getRootProps()}>
+                      <input className="input-dropzone" {...getInputProps()} />
+                      <p>Upload foto de perfil</p>
+                    </div>
+                  </section>
+                )}
+              </Dropzone>
             </div>
             <div className="remove-photo">
               <p>Remover foto</p>

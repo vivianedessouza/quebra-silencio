@@ -13,6 +13,9 @@ class LoginRegister extends Component {
     };
   }
 
+  handleStartSessionButton = () => {
+    this.props.history.push("/loggedHome");
+  };
   handleRegisterButton = () => {
     this.props.history.push("/registerStepOne");
   };
@@ -85,7 +88,12 @@ class LoginRegister extends Component {
             className="btn-purple color-white btn-login"
             onClick={() => this.handleSignIn()}
           >
-            <a className="btn-style">Iniciar Sessão</a>
+            <a
+              className="btn-style"
+              onClick={() => this.handleStartSessionButton()}
+            >
+              Iniciar Sessão
+            </a>
           </button>
           <h3>
             <Link className="reset--password" to={"forgotPassword"}>

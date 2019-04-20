@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import Icon from "./../../common/Icon";
-import { withRouter, Link} from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import Validate from "react-validate-form";
+import Dropzone from "react-dropzone";
+
 import "./Register.scss";
 
 class RegisterStepTwo extends Component {
@@ -10,11 +12,10 @@ class RegisterStepTwo extends Component {
     this.state = {
       name: "",
       username: "",
-      password:"",
+      password: "",
       passwordConfirm: "",
       email: "",
-      phone:"",
-
+      phone: ""
     };
   }
 
@@ -44,15 +45,16 @@ class RegisterStepTwo extends Component {
             <span className="fill--input input-right">
               <Icon icon="user" className="input-icon" />
               <Validate>
-              {({ validate, errorMessages }) => (
-                
-              <input onChange={validate} required
-                className="input-text"
-                type="text"
-                name="username"
-                placeholder="Username"
-              />             
-              )}
+                {({ validate, errorMessages }) => (
+                  <input
+                    onChange={validate}
+                    required
+                    className="input-text"
+                    type="text"
+                    name="username"
+                    placeholder="Username"
+                  />
+                )}
               </Validate>
             </span>
             <span className="fill--input input-left">
@@ -91,26 +93,41 @@ class RegisterStepTwo extends Component {
                 placeholder="Contacto Telefónico (Opcional)"
               />
             </span>
-            <select include="form-input-select()" required className="fill--input input-left form-input-select">
-              <Icon icon="map" className="input-icon" />
-              <option value="" hidden>Localidade - Distrito</option>
-              <option value="Lisboa">Lisboa</option>
-              <option value="Porto">Porto</option>
-              <option value="Aveiro">Aveiro</option>
-            </select>
+            <span className="fill--input input-left ">
+              <Icon icon="map-marker-alt" className="input-icon" />
+              <select
+                include="form-input-select()"
+                required
+                className="form-input-select"
+              >
+                <option value="">Localidade - Distrito</option>
+                <option value="Lisboa">Lisboa</option>
+                <option value="Porto">Porto</option>
+                <option value="Aveiro">Aveiro</option>
+              </select>
+            </span>
             <span className="file--input input-right">
               <Icon
                 icon="upload"
                 className="input-icon input-icon-formatting"
               />
-              <input
-                className="input-text text-formatting"
-                type="text"
-                name="image"
-                id="image"
-                placeholder="Upload - Foto de Perfil (Opcional)"
-              />
+              <Dropzone
+                onDrop={acceptedFiles => {
+                  // handle the file
+                  console.log(acceptedFiles);
+                }}
+              >
+                {({ getRootProps, getInputProps }) => (
+                  <section>
+                    <div {...getRootProps()}>
+                      <input {...getInputProps()} />
+                      <p>Upload - Foto de Perfil (Opcional)</p>
+                    </div>
+                  </section>
+                )}
+              </Dropzone>
             </span>
+
             <div>
               {this.props.location.state.isProfessional ? (
                 <Link

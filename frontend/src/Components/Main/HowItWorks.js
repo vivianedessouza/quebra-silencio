@@ -21,7 +21,7 @@ export class HowWorks extends Component {
               </a>
             </p>
             <div className="flex btn-purple">
-              <Link to={'loginRegister'}>Regist-se Aqui</Link>
+              <Link to={'loginRegister'}>Registe-se Aqui</Link>
             </div>
           </div>
         </article>

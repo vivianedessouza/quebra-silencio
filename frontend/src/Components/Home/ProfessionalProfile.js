@@ -1,9 +1,17 @@
 import React, { Component } from "react";
 import Icon from "../common/Icon";
 import imageProcess from "./../../images/image_process.jpg";
+import { withRouter, Link } from "react-router-dom";
 import LoggedHome from "./LoggedHome";
 
 export class ProfessionalProfile extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  handleEditProfile = () => {
+    this.props.history.push("/editProfile");
+  };
   render() {
     return (
       <div>
@@ -30,7 +38,7 @@ export class ProfessionalProfile extends Component {
               </div>
               <div className="victim-localization">
                 <p>
-                  <Icon className="map-marker-alt" icon="marker" />
+                <Icon icon="map-marker-alt" className="phone" />
                   Lisboa
                 </p>
                 <p>
@@ -39,11 +47,12 @@ export class ProfessionalProfile extends Component {
                 </p>
               </div>
             </div>
-            <div className="save-changes-btn">
-              <p>
-                <Icon className="edit" icon="edit" />
-                Editar Perfil
-              </p>
+            <div
+              className="save-changes-btn"
+              onClick={() => this.handleEditProfile}
+            >
+              
+              <p><Icon className="edit" icon="edit" />Editar Perfil</p>
             </div>
           </div>
           <div className="edit-content" />
@@ -65,4 +74,4 @@ export class ProfessionalProfile extends Component {
   }
 }
 
-export default ProfessionalProfile;
+export default withRouter(ProfessionalProfile);

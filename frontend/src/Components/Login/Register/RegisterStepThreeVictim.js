@@ -78,19 +78,27 @@ class RegisterStepThreeVictim extends Component {
               )}
             </div>
           </div>
-          <textarea className="situation--description">
-            Descreva a sua situação… Esta informação estará visível apenas para
-            profissionais que a possam ajudar
-          </textarea>
-          <div className="fill--input input-left input-formatting">
-            <Icon icon="info" className="input-icon" />
-            <input
-              type="text"
-              className="input-text"
-              name="state"
-              placeholder="Estado Civil"
+          <div contenteditable="true">
+            <textarea
+              className="situation--description"
+              placeholder="Descreva a sua situação… Esta informação estará visível apenas para
+            profissionais que a possam ajudar"
             />
           </div>
+         
+
+          <span className="fill--input input-left input-formatting">
+            <Icon icon="info" className="input-icon" />
+            <select
+              include="form-input-select()"
+              required
+              className="form-input-select"
+            >
+              <option value="">Estado Civil</option>
+              <option value="Casado">Casado(a)</option>
+              <option value="Solteiro">Solteiro(a)</option>
+            </select>
+          </span>
           <div>
             <Link to={"/loggedHome"} className="next--step">
               Enviar
