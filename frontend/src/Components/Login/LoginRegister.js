@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withRouter, Link } from "react-router-dom";
 import "./Login.scss";
 import Icon from "./../common/Icon";
+import axios from "axios";
 
 class LoginRegister extends Component {
   constructor(props) {
@@ -14,7 +15,16 @@ class LoginRegister extends Component {
   }
 
   handleStartSessionButton = () => {
-    this.props.history.push("/loggedHome");
+    // const endpoint = "https://quebra-o-silencio.herokuapp.com/";
+    // const api = "login";
+    // const body = {
+    //   username: "vivi@gmail.com",
+    //   password: "123123"
+    // };
+    // axios.post(endpoint + api, body).then(res => {
+      // localStorage.push("userInfo", res.data);
+      this.props.history.push("/loggedHome");
+    // });
   };
   handleRegisterButton = () => {
     this.props.history.push("/registerStepOne");
@@ -96,7 +106,10 @@ class LoginRegister extends Component {
             </a>
           </button>
           <h3>
-            <Link className="reset--password" to={"forgotPassword"}>
+            <Link
+              className="reset--password"
+              /*to={"forgotPassword"}*/ to={"/sideNavBar"}
+            >
               Esqueceu-se da palavra-passe?
             </Link>
             <hr />

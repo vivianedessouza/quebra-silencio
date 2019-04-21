@@ -17,12 +17,14 @@ import Process from "./Components/Home/Process";
 import VictimProfile from "./Components/Home/VictimProfile";
 import ProfessionalProfile from "./Components/Home/ProfessionalProfile";
 import VictimChat from "./Components/Home/VictimChat";
+import SideNavBar from "./Components/Home/SideNavBar";
 
 const LandingPage = () => {
   return (
     <div className="App">
       <Header />
       <Main />
+      
     </div>
   );
 };
@@ -91,6 +93,7 @@ export default () => (
         <AuthRoute exact path="/process" Component={Process} />
         <AuthRoute exact path="/victimProfile" Component={VictimProfile} />
         <AuthRoute exact path="/victimChat" Component={VictimChat} />
+        <AuthRoute exact path="/sideNavBar" Component={SideNavBar} />
         <AuthRoute
           exact
           path="/professionalProfile"

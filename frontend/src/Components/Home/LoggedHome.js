@@ -1,16 +1,18 @@
 import React, { Component } from "react";
 import { withRouter} from "react-router-dom";
-import MySideBar from "./MySideBar";
+import SideNavBar from "./SideNavBar";
 import NavBar from "./NavBar";
 import "./Profile.scss";
+import "./SideNav.scss";
 
 class LoggedHome extends Component {
   render() {
     return (
       <div>
         <div className="logged-container">
-          <MySideBar />
+          <SideNavBar />
           <NavBar />
+          
         </div>
       </div>
     );
