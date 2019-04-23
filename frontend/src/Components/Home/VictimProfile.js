@@ -30,7 +30,7 @@ export class VictimProfile extends Component {
               </div>
               <div className="victim-localization">
                 <p>
-                  <Icon className="map-marker-alt" icon="marker" />
+                <Icon icon="map-marker-alt" className="phone" />
                   Lisboa
                 </p>
                 <p>

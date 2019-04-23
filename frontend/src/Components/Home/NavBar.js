@@ -12,7 +12,7 @@ export class NavBar extends Component {
     this.state = {
       isSideBarOpen: false,
       hideShowPanel: false,
-      username: "Viviane Souza DEMO"
+      username: "Viviane Souza"
     };
   }
 

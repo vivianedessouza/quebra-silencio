@@ -145,7 +145,6 @@ $big-border: 41px;
 }
 
 .img-header {
-  
   margin-right: 50px;
   float: right;
   width: 50px;
@@ -180,7 +179,6 @@ $big-border: 41px;
   position: absolute;
   right: 55px;
   top: 41px;
-  
 }
 
 .chevron-down {
@@ -191,7 +189,6 @@ $big-border: 41px;
   right: 10px;
   top: 30px;
   position: absolute;
- 
 }
 
 .toggle-container {
@@ -426,7 +423,7 @@ $big-border: 41px;
     margin-right: 30px;
     right: 0px;
     top: 120px;
-    
+    cursor: pointer;
 
     p {
       padding: 15px;
@@ -444,7 +441,8 @@ $big-border: 41px;
     right: 120px;
     top: 120px;
     margin-right: 100px;
-    
+    cursor: pointer;
+
     p {
       padding: 15px;
       color: #7e64eb;
@@ -559,8 +557,9 @@ $big-border: 41px;
       width: 200px;
       height: 40px;
       border-radius: 6px;
-      margin-right: 50px;
+      margin-right: 20px;
       display: inline-block;
+      cursor: pointer;
 
       p {
         text-align: center;
@@ -578,6 +577,7 @@ $big-border: 41px;
       height: 20px;
       margin-top: 50px;
       float: right;
+      cursor: pointer;
 
       p {
         color: #9f8deb;
@@ -652,6 +652,9 @@ $big-border: 41px;
     margin-left: 50px;
 
     .victim-name {
+      h2 {
+        color: #515151;
+      }
       img {
         display: inline;
         color: #515151;
@@ -694,10 +697,6 @@ $big-border: 41px;
     font-size: 15px;
     color: #515151;
   }
-}
-
-.map-marker-alt {
-  color: red;
 }
 
 .professional-profile-historic {
@@ -835,13 +834,12 @@ $big-border: 41px;
   display: flex;
 
   .avatar-box-email {
-   
-    background-color: #EEEBFB;
+    background-color: #eeebfb;
     border-radius: 64px;
     width: 300px;
     height: 70px;
-    
-    p{
+
+    p {
       display: inline;
     }
   }
