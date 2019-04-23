@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import LoggedHome from "./LoggedHome";
-import { withRouter} from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import Dropzone from "react-dropzone";
-
 
 class EditProfile extends Component {
   constructor(props) {
