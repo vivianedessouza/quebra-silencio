@@ -108,7 +108,7 @@ class LoginRegister extends Component {
           <h3>
             <Link
               className="reset--password"
-              /*to={"forgotPassword"}*/ to={"/sideNavBar"}
+              to={"forgotPassword"}
             >
               Esqueceu-se da palavra-passe?
             </Link>
