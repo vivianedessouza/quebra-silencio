@@ -1,0 +1,167 @@
+/************Reset************/
+html { height: 100%; }
+
+*{box-sizing: border-box}
+
+h1, h2, h3, h4, h5, h6, figure, p, body, ul, ol, li { padding: 0; margin: 0; }
+
+img {  display: block;  max-width: 100%;  object-fit: contain; }
+
+/************Vars************/
+:root {
+  /****Margin****/
+  --main-margin: 40px;
+  --navBar-margin: 20px 0px 0px 20px;
+
+  /****Tipografia****/
+  --montserrat: "Montserrat", sans-serif;
+}
+
+/************General-Style************/
+body {
+  font-family: var(--montserrat);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  white-space: nowrap;
+}
+
+h2 {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 27px;
+  font-weight: 600;
+  white-space: nowrap;
+  position: relative;
+  margin: 50px 0px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 16;
+}
+
+::selection {
+  background: #7e64eb;
+}
+
+::placeholder {
+  font-family: var(--montserrat);
+}
+
+/************General-Classes************/
+
+/*******Colors*******/
+
+.color-white {
+  color: #fff;
+}
+
+.color-purple {
+  color: #7e64eb;
+}
+
+.background-color {
+  background-color: #fff;
+}
+
+.background-purple{
+  background-image: linear-gradient(to right, #614fad 85%, #7f4eb8);
+}
+
+/*******Margin && Padding*******/
+
+.padding {
+  padding: var(--main-margin);
+}
+
+/*******Styles*******/
+
+.btn-purple {
+  height: 34px;
+  width: 200px;
+  border-radius: 30px;
+  background-color: #7e64eb;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.icons {
+  height: 16px;
+  width: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.purple-gradient {
+  background-image: linear-gradient(#614fad 85%, #7f4eb8);
+  letter-spacing: 1px;
+  line-height: 24px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.purple-line:before {
+  content: "";
+  width: 36px;
+  height: 3px;
+  background-color: #7e64eb;
+  position: absolute;
+  top: 30px;
+}
+
+.filter:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(126, 100, 235, 0.2);
+}
+
+.input-text {
+  border: none;
+  background: transparent;
+  margin-left: 8px;
+  padding: 2px;
+  width: 90%;
+}
+
+.input-icon {
+  color: #c5bbef;
+}
+
+.alert {
+  font-size: 13px;
+  color: #fff;
+  font-family: Montserrat, Bold Italic;
+  background-color: #bb61ff;
+}
+
+.alert-danger {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  width: 297px;
+  margin: 0 auto;
+}

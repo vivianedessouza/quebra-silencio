@@ -1,0 +1,6 @@
+.str-chat-channel .str-chat__container {
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    width: 500px;
+}

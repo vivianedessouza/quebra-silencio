@@ -1,0 +1,93 @@
+header{
+ 
+    nav{
+
+        h1{
+            position: absolute;
+            top: 8px;
+            left: var(--main-margin);
+            margin: var(--navBar-margin);
+            text-transform: uppercase;
+            margin-left: 0px;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        ul{   
+            position: absolute;
+            right: var(--main-margin); 
+            top: 0px; 
+            
+            li{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: var(--navBar-margin);
+                font-size: 16px;
+                font-weight: 600;
+
+            }
+
+            li:last-child{
+                    height: 34px;
+                    width: 100%;
+                    border-radius: 30px;
+                    background-color:#7E64EB;     
+                    margin-right: 0px;  
+                    padding: 20px 30px;;      
+            }
+        }        
+    }
+
+    .headerContents{
+
+         p{
+            font-weight: 700;
+        }
+
+        p:first-child{
+            font-size: 200px;
+        }
+
+        p:last-child{
+            font-size: 31px;
+        }
+  
+        .media{
+            position: absolute;
+            bottom: var(--main-margin);
+            right: var(--main-margin);           
+
+            li{
+                margin-left: 10px;
+            }
+        }
+    }   
+}
+
+.slide-container {
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  margin: 0; }
+
+.each-slide > div {
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  height:100%;
+}
+
+.indicators{
+    position: absolute;
+    margin: 0px !important;
+    bottom: var(--main-margin);
+    left: var(--main-margin);
+}
+
+.react-slideshow-container + div.indicators > div.active{ background: #fff !important; }
+.react-slideshow-container + div.indicators > div{ background:#707070 !important; }
+
+.react-slideshow-container .nav:last-of-type{ display: none; }
+.react-slideshow-container .nav:first-of-type{ display: none; }

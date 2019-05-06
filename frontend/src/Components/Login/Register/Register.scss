@@ -1,0 +1,297 @@
+// Demo Colors, font and size
+
+$purple-color: #806ad9;
+$light-purple-color: #9f8deb;
+$rainbow-color: #bb61ff;
+$purple-back: #7e64eb;
+$gray-color: #eeebfb;
+$dark-gray-color: #7f7f80;
+$white-color: #fff;
+$textarea-color: #c5bbef;
+$Montserrat: Montserrat, Bold Italic;
+$medium-size: 16px;
+$small-size: 13px;
+$big-size: 20px;
+$null: 0px;
+$small-border: 1px;
+$medium-border: 3px;
+$big-border: 41px;
+
+.btn-group-register{
+      margin-top: 2rem;
+}
+
+.external--container {
+  background-color: $purple-back;
+  background-size: cover;
+  margin: $null;
+  padding-bottom: 137px;
+  background-image: linear-gradient(#614fad 85%, #7f4eb8);
+
+  .main--section {
+    background-color: $white-color;
+    margin: $null 100px $null 100px;
+    height: 768px;
+    position: relative;
+  }
+
+  .position-center {
+    text-align: center;
+  }
+
+  .logo {
+    color: $white-color;
+    font-family: $Montserrat;
+    font-size: $big-size;
+    text-transform: uppercase;
+    padding: 54px $null 54px;
+    text-align: center;
+  }
+
+  .color-purple {
+    color: $light-purple-color;
+    text-transform: uppercase;
+  }
+
+  .title {
+    text-align: center;
+    color: $purple-color;
+    font-family: $Montserrat;
+    font-size: 34px;
+    padding-top: 100px;
+  }
+
+  .text {
+    width: 710px;
+    font-size: $medium-size;
+    color: $purple-color;
+    margin: $null auto;
+    padding-top: 30px;
+  }
+
+  .input--email {
+    width: 414.15px;
+    background-color: $gray-color;
+    font-size: 13px;
+    padding: $big-size;
+    margin: $null auto;
+    display: block;
+    margin-top: 59px;
+    margin-bottom: 61px;
+    border: none;
+  }
+
+  .btn-register {
+    margin-top: 62px;
+    color: $white-color;
+    height: 50px;
+    background-image: linear-gradient(#614fad 85%, #7f4eb8);
+  }
+
+  textarea:focus,
+  input:focus,
+  button:focus,
+  label:focus,
+  select:focus,
+  .input-dropzone:focus,
+  .file--input:focus {
+    outline: 0px !important;
+    -webkit-appearance: none;
+    border: 0px;
+  }
+  .steps {
+    font-size: 19px;
+    color: $light-purple-color;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .btn-professional {
+    width: 350px;
+    height: 57px;
+    border: $null;
+    background-color: $purple-color;
+    margin-right: 30px;
+    margin-top: 79px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .icon-check {
+    margin-left: 237px;
+    display: inline-block;
+    position: relative;
+    top: -$big-size;
+  }
+
+  .btn-users {
+    background-color: $light-purple-color;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 30px;
+    width: 275px;
+    height: 60px;
+    border-radius: 4px;
+    margin-top: 70px;
+
+    p {
+      padding: 7% 1em $null;
+      font-size: 19px;
+      color: $white-color;
+      font-family: $Montserrat;
+    }
+  }
+
+  .btn-users-selected {
+    background-color: $purple-color;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 30px;
+    width: 275px;
+    height: 60px;
+    border-radius: 4px;
+    text-align: left;
+    font-size: 19px;
+    margin-top: 70px;
+
+    p {
+      padding: 7% 1em 0px 2em;
+      font-size: 19px;
+      color: $white-color;
+      font-family: $Montserrat;
+    }
+
+    .selected-button {
+      background-color: $purple-color;
+    }
+  }
+
+  .next--step {
+    font-size: 14px;
+    color: $light-purple-color;
+    position: absolute;
+    right: 62px;
+    bottom: 50px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-bottom: 2px solid;
+    padding-bottom: 8px;
+  }
+
+  .back--step {
+    font-size: 14px;
+    color: $light-purple-color;
+    position: absolute;
+    left: 62px;
+    bottom: 50px;
+    border-bottom: 2px solid;
+    padding-bottom: 8px;
+  }
+
+  .input--group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+    padding: 30px;
+  }
+
+  .fill--input {
+    background-color: #eeebfb;
+    font-size: 13px;
+    padding: $big-size;
+    margin-bottom: 10px;
+  }
+
+  .input-left {
+    border-radius: 1px;
+  }
+
+  .input-right {
+    border-radius: 1px;
+  }
+
+  .file--input {
+    border-style: dashed;
+    font-size: 13px;
+    border-color: #806ad9;
+    border-radius: 1px;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+    p {
+      color: #7f7f80;
+      font-size: 12px;
+      margin-left: 37px;
+      margin-top: 22px;
+    }
+  }
+
+  .input-formatting {
+    margin: 0 400px 0 100px;
+    width: 39%;
+  }
+
+  .form-input-select {
+    background-color: #eeebfb;
+    margin-left: 8px;
+    border: 0px;
+    border-radius: 1px;
+    color: #7f7f80;
+    font-size: 12px;
+  }
+
+  .situation--description {
+    background-color: $gray-color;
+    color: $textarea-color;
+    width: 100%;
+    height: 134px;
+    font-size: 13px;
+    border: $null;
+    border-radius: $small-border;
+  }
+
+  .textarea-container {
+    padding: 20px 100px;
+  }
+
+  [contentEditable="true"]:empty:before {
+    content: attr(placeholder);
+    display: block;
+  }
+
+  .information {
+    font-size: 16px;
+    color: $purple-color;
+    margin-top: 218px;
+    margin-bottom: 74px;
+  }
+
+  .input-document {
+    border-radius: 1px;
+    margin: 49px 300px 0px 300px;
+
+    p {
+      font-size: $medium-size;
+      color: $purple-color;
+      padding: $big-size;
+      text-align: center;
+      margin-left: 0px;
+      margin-top: 0px;
+    }
+  }
+
+  .text-formatting {
+    margin-left: 5px;
+    margin-top: $big-size;
+  }
+
+  .input-icon-formatting {
+    margin-left: 13px;
+    float: left;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,152 @@
+/************Variables************/
+
+$purple-color: #806ad9;
+$purple-back: #7e64eb;
+$gray-color: #eeebfb;
+$dark-gray-color: #7f7f80;
+$white-color: #fff;
+$textarea-color: #c5bbef;
+$Montserrat: Montserrat, Bold Italic;
+$medium-size: 20px;
+
+/************Styles login************/
+
+.container {
+  background-color: $purple-back;
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr 10%;
+
+
+  .start--registration {
+    background-color: $gray-color;
+    width: 100%;
+    margin-left: 0px;
+    text-align: center;
+    max-height: 100vh;
+    margin-bottom: 25%;
+  }
+
+  .start--section {
+    background-color: $white-color;
+    padding: 0 20px 0 20px;
+    text-align: center;
+    grid-column: 2/3;
+    max-height: 100vh;
+    margin-bottom: 25%;
+  }
+
+  /************Text************/
+
+  .logo {
+    color: $white-color;
+    font-family: $Montserrat;
+    font-size: $medium-size;
+    margin-top: 54px;
+    margin-bottom: 54px;
+    text-transform: uppercase;
+    text-align: center;
+    grid-column: 1/5;
+  }
+
+  .color-purple {
+    color: #9f8deb;
+    text-align: center;
+  }
+
+  .title {
+    text-align: center;
+    color: $purple-color;
+    font-family: $Montserrat;
+    font-size: 34px;
+    margin-top: 147px;
+  }
+  .text-purple {
+    font-size: 16px;
+    color: $purple-color;
+    margin-top: 62px;
+  }
+
+  /************Input************/
+
+  .input--username {
+    width: 414.15px;
+    background-color: $gray-color;
+    font-size: 13px;
+    padding: 20px;
+    margin-top: 61px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 18px;
+    margin-top: 61px;
+  }
+
+  .input--password {
+    width: 414.15px;
+    background-color: $gray-color;
+    font-size: 13px;
+    padding: 20px;
+    margin-bottom: 134px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .input-login-form {
+    display: absolute;
+  }
+
+  .input--password:focus {
+    outline: none;
+  }
+
+  textarea:focus,
+  input:focus,
+  button:focus,
+  label:focus {
+    outline: 0px !important;
+    -webkit-appearance: none;
+  }
+
+  /************Button************/
+  .btn-purple {
+    padding: 19px 44px;
+    width: 234px;
+    height: 57px;
+    cursor: pointer;
+  }
+
+  .btn-style {
+    text-decoration: uppercase;
+    font-size: 16px;
+  }
+
+  .reset--password {
+    font-size: 13px;
+    color: $dark-gray-color;
+    font-family: $Montserrat;
+    margin: 0;
+  }
+
+  hr {
+    width: 230px;
+  }
+
+  .btn-register {
+    margin-top: 240px;
+    cursor: pointer;
+    color: $white-color;
+  }
+
+  .btn-login {
+    margin-top: 50px;
+  }
+
+  .btn-login:focus,
+  .btn-register:focus {
+    outline: none;
+  }
+}
+
+/*****Alert Position*****/
+.alert--position {
+  margin-top: 25px;
+}
