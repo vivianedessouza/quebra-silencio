@@ -1,2 +1,6 @@
 # help-me/backend
-Aplicação para de apoio as pessoas que sofrem violência doméstica. 
+npm install & npm start
+
+
+Host: https://quebra-o-silencio.herokuapp.com/  
+Documentacão: https://documenter.getpostman.com/view/7098435/S1Lu19GK

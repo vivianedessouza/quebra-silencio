@@ -1,0 +1,4 @@
+{
+    "name": "Node.js Quebra o Silencio API",
+    "description": "A RESTful API using Express and Sequelize"
+}
